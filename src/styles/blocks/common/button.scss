@@ -1,5 +1,5 @@
-@use '../vars/' as *;
-@use '../mixins/' as *;
+@use '../../vars/' as *;
+@use '../../mixins/' as *;
 
 .button {
   @include button-border;
