@@ -4,6 +4,7 @@
 .button {
   @include button-border;
   @include focus-effect;
+  transition: 0.2s;
 
   &_type_icon {
     display: flex;
