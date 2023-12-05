@@ -1,0 +1,102 @@
+@use '../vars/' as *;
+
+.hero {
+  background-color: darken($purple, 15%);
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+    min-height: 100vh;
+    gap: 2rem 0;
+    @media (min-width: calc($tablet + 1px)) {
+      justify-content: space-between;
+    }
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__left {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    flex: 0 1 32rem;
+    @media (max-width: $tablet) {
+      text-align: center;
+      align-items: center;
+    }
+  }
+  &__title {
+    font-size: 4rem;
+  }
+  &__paragraph {
+    width: 75%;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    @media (max-width: $tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__right {
+    position: relative;
+    z-index: 1;
+    @media (min-width: calc($tablet + 1px)) {
+      flex: 1 0 20rem;
+    }
+  }
+
+  &__phone {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    @media (min-width: calc($tablet + 1px)) {
+      max-height: 85vh;
+      object-position: right;
+    }
+    @media (max-width: $tablet) {
+      max-height: 35rem;
+      object-position: center;
+    }
+  }
+
+  &__clouds {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    min-width: 32rem;
+    height: 100%;
+    object-fit: contain;
+  }
+  &__clouds_front {
+    z-index: 1;
+    top: 25%;
+    @media (min-width: calc($tablet + 1px)) {
+      right: -30%;
+    }
+    @media (max-width: $tablet) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__clouds_back {
+    z-index: -1;
+    top: 0;
+    @media (min-width: calc($tablet + 1px)) {
+      right: -10%;
+    }
+    @media (max-width: $tablet) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

@@ -4,4 +4,19 @@
 .button {
   @include button-border;
   @include focus-effect;
+
+  &_type_icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+  }
+
+  &_style {
+    &_white {
+      color: $black;
+      font-weight: 900;
+      background-color: $white;
+    }
+  }
 }
