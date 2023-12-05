@@ -1,0 +1,7 @@
+@use '../vars/' as *;
+@use '../mixins/' as *;
+
+.button {
+  @include button-border;
+  @include focus-effect;
+}
