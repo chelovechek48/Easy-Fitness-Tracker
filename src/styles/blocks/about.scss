@@ -1,0 +1,48 @@
+@use '../vars/' as *;
+@use '../mixins/' as *;
+
+.about {
+  &__paragraph {
+    max-width: 30rem;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__item {
+    color: $white;
+    width: 22rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.25rem;
+    @include element-border;
+
+    &:nth-child(3n - 2) {
+      background-color: $tomato;
+    }
+    &:nth-child(3n - 1) {
+      background-color: $pink;
+    }
+    &:nth-child(3n) {
+      background-color: $gold;
+    }
+
+    &-image {
+      flex: 0 0 4rem;
+      background-color: $white;
+      padding: 1.25rem;
+      @include element-border($shadow-size: 0);
+    }
+
+    &-title {
+      flex: 1 1 0%;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
+}

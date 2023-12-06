@@ -9,14 +9,18 @@
   }
 }
 
-@mixin button-border ($border-radius: 0.4rem, $color: $black) {
+@mixin element-border ($border-radius: 0.4rem, $color: $black, $shadow-size: 0.3rem) {
   border-radius: $border-radius;
   box-shadow:
     0 0 0 0.2rem $color,
-    0 0.3rem 0 0.2rem $color;
+    0 $shadow-size 0 0.2rem $color;
+}
+
+@mixin element-border-hover ($border-radius: 0.4rem, $color: $black, $shadow-size: 0.3rem) {
+  @include element-border($border-radius: $border-radius, $color: $color, $shadow-size: $shadow-size);
   &:hover {
     box-shadow:
       0 0 0 0.2rem $color,
-      0 0 0 0.5rem $color;
+      0 0 0 ($shadow-size + 0.2rem) $color;
   }
 }

@@ -60,7 +60,7 @@
     min-height: 100%;
     aspect-ratio: 1;
     background-color: $white;
-    @include button-border($border-radius: 50%);
+    @include element-border-hover($border-radius: 50%);
     transition: 0.2s;
 
     display: flex;

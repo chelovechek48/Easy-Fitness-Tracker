@@ -2,7 +2,7 @@
 @use '../../mixins/' as *;
 
 .button {
-  @include button-border;
+  @include element-border-hover;
   @include focus-effect;
   transition: 0.2s;
 
