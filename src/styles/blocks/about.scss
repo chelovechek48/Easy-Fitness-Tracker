@@ -20,16 +20,24 @@
     flex-wrap: wrap;
     gap: 1rem;
     padding: 1.25rem;
-    @include element-border;
 
-    &:nth-child(3n - 2) {
-      background-color: $tomato;
-    }
-    &:nth-child(3n - 1) {
-      background-color: $pink;
-    }
-    &:nth-child(3n) {
-      background-color: $gold;
+    border-radius: 0.4rem;
+    border: 0.2rem solid $black;
+    box-shadow: 0 -0.3rem 0 0 $black inset;
+
+    &_bg {
+      &_tomato {
+        background-color: $tomato;
+      }
+      &_pink {
+        background-color: $pink;
+      }
+      &_pink {
+        background-color: $pink;
+      }
+      &_gold {
+        background-color: $gold;
+      }
     }
 
     &-image {
@@ -43,6 +51,21 @@
       flex: 1 1 0%;
       font-size: 1.25rem;
       font-weight: 700;
+    }
+  }
+
+  
+  &__swiper {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+  &__pagination {
+    position: static;
+    margin-top: 1.5rem;
+    .swiper-pagination-bullet {
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: $black;
     }
   }
 }
