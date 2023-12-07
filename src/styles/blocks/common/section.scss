@@ -1,11 +1,21 @@
+@use '../../vars/' as *;
+
 .section {
+  @media (min-width: calc($laptop + 1px)) {
+    padding: 5rem 0;
+  }
+  @media (max-width: $laptop) and (min-width: calc($mobile + 1px)) {
+    padding: 3.5rem 0;
+  }
+  @media (max-width: $mobile) {
+    padding: 2.5rem 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
   }
   
   &__title {
